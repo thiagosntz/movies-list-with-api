@@ -33,6 +33,7 @@ function displayMovies(movie){
         </div>
 
         <div class="movie-overview">
+            <h4 class="title">${movie.title}</h4>
             <p class="overview">
                 ${movie.overview}
             </p>
@@ -41,6 +42,8 @@ function displayMovies(movie){
     </div>
     
     `
+
+    
 }
 
 const form = document.getElementById('form')

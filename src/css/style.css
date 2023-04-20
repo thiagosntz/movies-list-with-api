@@ -105,57 +105,68 @@ body{
 }
 
 .movies-container .movie{
-    background-color: var(--primary-gray);
-    max-width: 350px;
-    border: 1px solid var(--light-gray);
-    border-radius: 10px;
-    padding: 10px;
+    max-width: 300px;
     transition: 0.2s ease-in-out;
+    position: relative;
 }
 
 .movies-container .movie:hover{
     transform: scale(1.05);
-    border: 1px solid var(--bright-gray);
 }
 
 .movie .movie-presentation{
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    flex-direction: column;
+    padding: 10px 0;
 }
 
 .movie .movie-presentation .poster{
-    width: 50%;
+    width: 100%;
+    margin: 0 auto;
 }
+
 
 .movie .movie-presentation .poster img{
     width: 100%;
-    border: 1px solid var(--bright-gray);
 }
+
 
 .movie .movie-presentation .movie-title{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 0;
-    width: 40%;
+    background-color: var(--dark-gray);
+    padding: 5px 0 15px 0;
+    text-align: center;
+    margin-top: -4px;
 }
 
-.movie .movie-presentation .movie-title h3{
-    font-size: 25px;
-    font-weight: 400;
+.movie .movie-presentation .movie-title h4{
+    font-weight: bold;
+    margin: 5px 0;
 }
+
 
 .movie .movie-presentation .movie-title .rating{
     background-color: var(--primary-orange);
-    padding: 3px 5px;
+    padding: 2px 5px;
     border-radius: 5px;
 }
 
 .movie .movie-overview{
-    font-size: 14px;
-    padding: 0 5px;
-    margin-bottom: 30px;
+    padding: 50px 25px;
+    background-color: var(--dark-gray);
+    position: absolute;
+    top: 10px;
+    height: 95%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.movie .movie-overview:hover{
+    opacity: 0.9;
+}
+
+.movie .movie-overview h4{
+    margin-bottom: 15px;
 }
 
 .movie.hide{
